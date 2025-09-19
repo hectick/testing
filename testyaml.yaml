@@ -25,7 +25,7 @@ anchorLinks:
 # Highlighting
 
 tagConfig:
-  legend: ["Queue Technology:", "rabbitMQ", "kafka", "|", "Flow Attribs:", "inflow", "depth", "latency", "active", "|"]
+  legend: ["Step:", "analyzer", "generator", "transfer", "target", "|", "Flow Attribs:", "inflow", "depth", "latency", "active", "|"]
   color: "yellow"
   highlightRgbFactor: 5.0
   lowlightAlphaFactor: 0.3
@@ -45,7 +45,7 @@ cells:
       units: "ops"
     labelColor:
       thresholds: *threshold_inflow
-    tags: ["inflow", "rabbitMQ"]
+    tags: ["inflow", "analyzer"]
   analyzer_depth:
     dataRef: "test-data-large-cos"
     label:
@@ -53,7 +53,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_depth
-    tags: ["depth", "rabbitMQ"]
+    tags: ["depth", "analyzer"]
   analyzer_latency:
     dataRef: "test-data-small-sin"
     label:
@@ -61,7 +61,7 @@ cells:
       units: "s"
     labelColor:
       thresholds: *threshold_latency
-    tags: ["latency", "rabbitMQ"]
+    tags: ["latency", "analyzer"]
   analyzer_active:
     dataRef: "test-data-large-cos"
     label:
@@ -69,7 +69,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_active
-    tags: ["active", "rabbitMQ"]
+    tags: ["active", "analyzer"]
 
   #----------------------------------------------------------------------------
   generator_inflow:
@@ -79,7 +79,7 @@ cells:
       units: "ops"
     labelColor:
       thresholds: *threshold_inflow
-    tags: ["inflow", "kafka"]
+    tags: ["inflow", "generator"]
   generator_depth:
     dataRef: "test-data-large-sin"
     label:
@@ -87,7 +87,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_depth
-    tags: ["depth", "kafka"]
+    tags: ["depth", "generator"]
   generator_latency:
     dataRef: "test-data-small-sin"
     label:
@@ -95,7 +95,7 @@ cells:
       units: "s"
     labelColor:
       thresholds: *threshold_latency
-    tags: ["latency", "kafka"]
+    tags: ["latency", "generator"]
   generator_active:
     dataRef: "test-data-large-sin"
     label:
@@ -103,7 +103,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_active
-    tags: ["active", "kafka"]
+    tags: ["active", "generator"]
 
   #----------------------------------------------------------------------------
   transfer_inflow:
@@ -113,7 +113,7 @@ cells:
       units: "ops"
     labelColor:
       thresholds: *threshold_inflow
-    tags: ["inflow", "kafka"]
+    tags: ["inflow", "transfer"]
   transfer_depth:
     dataRef: "test-data-large-cos"
     label:
@@ -121,7 +121,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_depth
-    tags: ["depth", "kafka"]
+    tags: ["depth", "transfer"]
   transfer_latency:
     dataRef: "test-data-small-sin"
     label:
@@ -129,7 +129,7 @@ cells:
       units: "s"
     labelColor:
       thresholds: *threshold_latency
-    tags: ["latency", "kafka"]
+    tags: ["latency", "transfer"]
   transfer_active:
     dataRef: "test-data-large-cos"
     label:
@@ -137,7 +137,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_active
-    tags: ["active", "kafka"]
+    tags: ["active", "transfer"]
 
   #----------------------------------------------------------------------------
   target_inflow:
@@ -147,7 +147,7 @@ cells:
       units: "ops"
     labelColor:
       thresholds: *threshold_inflow
-    tags: ["inflow", "rabbitMQ"]
+    tags: ["inflow", "target"]
   target_depth:
     dataRef: "test-data-large-cos"
     label:
@@ -155,7 +155,7 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_depth
-    tags: ["depth", "rabbitMQ"]
+    tags: ["depth", "target"]
   target_latency:
     dataRef: "test-data-small-cos"
     label:
@@ -163,7 +163,7 @@ cells:
       units: "s"
     labelColor:
       thresholds: *threshold_latency
-    tags: ["latency", "rabbitMQ"]
+    tags: ["latency", "target"]
   target_active:
     dataRef: "test-data-large-sin"
     label:
@@ -171,4 +171,4 @@ cells:
       units: "short"
     labelColor:
       thresholds: *threshold_active
-    tags: ["active", "rabbitMQ"]
+    tags: ["active", "target"]
